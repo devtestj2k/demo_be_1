@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Category = require('../models/category/categories');
-const path = require('path');
-
-router.get(`/`, (req, res) => {
-    res.sendFile(path.join(__dirname, '../myview.html'));
-});
 
 router.post(`/add_category`, (req, res) => {
     const category = new Category({
